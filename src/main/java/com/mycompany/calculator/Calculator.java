@@ -13,7 +13,7 @@ public class Calculator {
     
     
     public double CalculateSquareArea(int a) {
-        return sqrt(a);
+        return a*a;
     }
     
     public double CalculateRectArea(int a, int b) {
