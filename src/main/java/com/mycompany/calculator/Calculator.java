@@ -29,19 +29,19 @@ public class Calculator {
     }
 
     public double CalculateTriangleArea(int a, int h) {
-        return (a * h) / 2;
+        return (a * h) / 2.0;
     }
 
     public double CalculateTriangleCirc(int a, int b, int c) {
         return a + b + c;
     }
 
-    public int convertCelsiusToFarenheit(int celcius) {
-        return (9 / 5) * celcius + 32;
+    public double convertCelsiusToFarenheit(double celcius) {
+        return celcius * 9 / 5.0 + 32;
     }
 
-    public int convertFarenheitToCelsius(int farenheit) {
-        return (5 / 9) * (farenheit - 32);
+    public double convertFarenheitToCelsius(double farenheit) {
+        return (5 / 9.0) * (farenheit - 32);
     }
 
     public double convertFromMphToKph(int mph) {
