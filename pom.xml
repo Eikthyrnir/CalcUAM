@@ -51,24 +51,12 @@
             </plugin>
 
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>4.0.0-M8</version>
-            </plugin>
-
-<!--            <plugin>-->
-<!--                <groupId>org.junit.jupiter</groupId>-->
-<!--                <artifactId>junit-jupiter-api</artifactId>-->
-<!--                <version>${junit.version}</version>-->
-<!--            </plugin>-->
-
-            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
-<!--                <configuration>-->
-<!--                    <outputDirectory>target/jacoco-ut</outputDirectory>-->
-<!--                </configuration>-->
+                <configuration>
+                    <outputDirectory>target/jacoco-ut</outputDirectory>
+                </configuration>
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>
@@ -97,14 +85,14 @@
                         <version>1.2.0</version>
                     </dependency>
                 </dependencies>
-<!--                <configuration>-->
-<!--                    <mutators>-->
-<!--                        <mutator>ALL</mutator>-->
-<!--                    </mutators>-->
-<!--                    <targetClasses>-->
-<!--                        <param>com.mycompany.calculator*</param>-->
-<!--                    </targetClasses>-->
-<!--                </configuration>-->
+                <configuration>
+                    <mutators>
+                        <mutator>ALL</mutator>
+                    </mutators>
+                    <targetClasses>
+                        <param>com.mycompany.calculator*</param>
+                    </targetClasses>
+                </configuration>
             </plugin>
         </plugins>
     </build>
