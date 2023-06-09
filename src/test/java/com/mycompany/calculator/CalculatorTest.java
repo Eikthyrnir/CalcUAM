@@ -116,18 +116,24 @@ public class CalculatorTest {
 
     @Test
     public void testFactorial() {
-        assertEquals(
-                2 * 3,
-                calculator.factorial(3)
-        );
+        int[] fact = {1, 1, 2, 2 * 3};
+        for (int i = 0; i < fact.length; i++) {
+            assertEquals(
+                    fact[i],
+                    calculator.factorial(i)
+            );
+        }
     }
 
     @Test
     public void testFibbonacci() {
-        assertEquals(
-                2,
-                calculator.fibbonacci(3)
-        );
+        int[] fibs = {0, 1, 1, 2, 3, 5, 8, 13};
+        for (int i = 0; i < fibs.length; i++) {
+            assertEquals(
+                    fibs[i],
+                    calculator.fibbonacci(i)
+            );
+        }
     }
 
     @Test
@@ -160,9 +166,12 @@ public class CalculatorTest {
 
     @Test
     public void testIsPrime() {
-        assertTrue(calculator.isPrime(2));
-        assertTrue(calculator.isPrime(11));
         assertFalse(calculator.isPrime(1));
+        assertTrue(calculator.isPrime(2));
+        assertFalse(calculator.isPrime(4));
+        assertFalse(calculator.isPrime(9));
+        assertTrue(calculator.isPrime(11));
         assertFalse(calculator.isPrime(12));
+        assertFalse(calculator.isPrime(49));
     }
 }
